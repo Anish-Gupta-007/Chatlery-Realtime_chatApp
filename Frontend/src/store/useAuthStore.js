@@ -8,7 +8,7 @@ import { use } from "react";
 const BASE_URL =
   import.meta.env.MODE === "development"
     ? "http://localhost:5001"
-    : "https://chatlery-realtime-chatapp-1.onrender.com";
+    : "https://chatlery-realtime-chat-app.vercel.app";
 export const useAuthStore = create((set, get) => ({
   authUser: null,
   isSigningUp: false,
