@@ -18,7 +18,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://chatlery-realtime-chatapp-1.onrender.com",
+      "https://chatlery-realtime-chat-app.vercel.app",
     ],
     credentials: true,
   })
