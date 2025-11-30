@@ -27,8 +27,8 @@ app.use("/api/message", messageRoutes);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../Frontend/dist")));
 
-  // ✅ Express v5 compatible wildcard route
-  app.get("/*", (req, res) => {
+  // ✅ SAFE fallback – NO wildcards
+  app.use((req, res) => {
     res.sendFile(path.join(__dirname, "../Frontend/dist/index.html"));
   });
 }
